@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
 
 var deps = [
   MatMenuModule,
@@ -22,7 +23,8 @@ var deps = [
   MatSelectModule,
   MatInputModule,
   MatDividerModule,
-  MatGridListModule
+  MatGridListModule,
+  MatCardModule
 ];
 
 @NgModule({
