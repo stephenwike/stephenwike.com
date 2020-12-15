@@ -1,0 +1,39 @@
+
+body {
+    background-color: red;
+}
+
+.app-container-base {
+    background-image: url('/assets/images/cross-pattern-tile.png');
+    background-size: 50px 50px;
+    background-repeat: repeat;
+}
+
+.app-container {
+    background-image: linear-gradient(90deg, rgba(55, 0, 155, 0.9), rgba(55,0,255,0.4) , rgba(0,0,0,0.0));
+}
+
+.fill-remaining-space {
+    /*This fills the remaining space, by using flexbox.  
+   Every toolbar row uses a flexbox row layout. */
+   flex: 1 1 auto;
+}
+
+.construction-warning {
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: #EEE;
+    top: 25%;
+    left: 10%;
+    text-align: center;
+    padding: 0;
+}
+
+.construction-warning h2{
+    margin: 0;
+}
+
+.construction-warning p{
+    font-size: 11px;
+    margin: 0;
+}

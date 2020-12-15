@@ -11,5 +11,4 @@ export class MyArtComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

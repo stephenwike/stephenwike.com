@@ -1,0 +1,39 @@
+<div class="app-container-base">
+
+  <div class="app-container">
+
+    <mat-toolbar color="primary">
+      <!-- <div class="welcome"></div> -->
+      <button mat-button routerLink="/">
+      <mat-icon>home</mat-icon> 
+          {{title}}</button>
+    
+      <!-- This fills the remaining space of the current row -->
+      <span class="fill-remaining-space"></span>
+      <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+          <button mat-button routerLink="/products" disabled>Projects</button>
+          <button mat-button routerLink="/dashboard" disabled>Dashboard</button>
+          <button mat-button routerLink="/login">Login</button>
+      </div>
+      <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+       <mat-icon>menu</mat-icon>
+      </button>
+    
+    </mat-toolbar>
+    <mat-menu x-position="before" #menu="matMenu">
+      <button mat-menu-item routerLink="/products">Products</button>
+      <button mat-menu-item routerLink="/dashboard">Dashboard</button>
+      <!--<button mat-menu-item>Help</button>-->
+    </mat-menu>
+    
+    <div class="construction-warning">
+      <h2>This Website is under construction</h2>
+      <p>Welcome to StephenWike.com.  This website is currently undergoing some major reconstruction.</p>
+      <p>Please feel free to navigation the working components, but don't be surprised if you run into features that don't work.</p>
+    </div>
+
+    <router-outlet></router-outlet>
+  
+  </div>
+  
+  </div>
