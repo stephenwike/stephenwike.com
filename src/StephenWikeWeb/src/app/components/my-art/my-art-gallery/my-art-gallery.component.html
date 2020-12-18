@@ -1,13 +1,24 @@
 <!-- <app-my-art-image [image]=art (closeImage)="onCloseImage()"></app-my-art-image> -->
 
+<div class="gallery" fxLayout="row" fxLayoutAlign="space-around center" fxFill>
 
-<div class="gallery" fxLayout="row" fxLayoutAlign="space-around center">
 
+  <div *ngFor="let art of artworks" class="image-container" [@imageContainerExpand]="isFocused(art)">
+    <button (click)="display(art)" class="image-button">
 
-  <div *ngFor="let art of artworks">
-    <button (click)="display(art)">
-      <img class="art-work" mat-card-image src="{{art.FilePath}}" alt="Photo of {{ art.Title }}">
+      <div fxFill fxLayout="row">
+
+        <div class="image-section" fxFill fxFlex="50">
+            <img class="art-work" mat-card-image src="{{ art.FilePath }}" alt="Photo of {{ art.Title }}"/>
+        </div>
+
+        <div *ngIf="image === art" class="image-details-section" fxFill fxFlex="50" fxLayout="column">
+            <h1>{{image.Title || "Title Unknown"}}</h1>
+            <h2>{{image.Created || "Unknown Date"}} </h2>
+            <p>{{image.Description || "No Description."}}</p>
+        </div>
+
+      </div>
     </button>
   </div>
-  
 </div>

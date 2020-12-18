@@ -1,10 +1,44 @@
 .gallery {
+    display: flex;
     flex-wrap: wrap;
     padding: 15px;
-    background-color: rgba(#000, 0.05);
+    background-color: rgba(#000, 0.75);
+    width: 100%;
+}
+
+.image-container {
+    margin: 15px;
+    padding: 0;
+}
+
+
+.image-button {
+    padding: 0;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
 }
 
 .art-work {
-    max-height: 250px;
-    margin: 10px;
+    height: 100%;
+    width: auto;
+}
+
+.image-section {
+    max-width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.image-details-section {
+    max-width: 50%;
+    color: lightgrey;
+    margin: auto;
+    height: 100%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

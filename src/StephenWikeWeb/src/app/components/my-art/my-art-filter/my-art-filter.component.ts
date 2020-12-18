@@ -14,7 +14,7 @@ export class MyArtFilterComponent implements OnInit {
 
   galleryFilterForm: FormGroup;
 
-  sortByCategories: string[] = [ 'Newest', 'Oldest', 'Topic', 'Random' ];
+  sortByCategories: string[] = [ 'Topic', 'Random' ]; //FUTURE: add 'Newest', 'Oldest',
   sortByCategory: string;
 
   constructor(private formBuilder: FormBuilder) { }
@@ -34,7 +34,6 @@ export class MyArtFilterComponent implements OnInit {
 
   updateSortBy(): void {
     let sortByCategory = this.galleryFilterForm.get('sortbyfilter').value;
-    console.log(sortByCategory);
     this.sortByChanged.emit(sortByCategory);
   }
 }
