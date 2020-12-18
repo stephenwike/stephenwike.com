@@ -1,0 +1,23 @@
+<div class="art-filter-container">
+
+    <h1 class="filter-header">Gallery Filter</h1>
+    <form [formGroup]="galleryFilterForm">
+
+        <!--Sort By Filter-->
+        <h2 class="filter-header">Sort By</h2>
+        <mat-radio-group class="sortby-radio-group" formControlName="sortbyfilter" (change)="updateSortBy()">
+            <mat-radio-button class="sortby-radio-button" *ngFor="let sortByCategory of sortByCategories" [value]="sortByCategory">
+                {{sortByCategory}}
+            </mat-radio-button>
+        </mat-radio-group>
+
+        <!--Topic Filter-->
+        <h2 class="filter-header">Show Topics</h2>
+        <mat-selection-list formControlName="topicfilters" (selectionChange)="updateFilters()" selectedOptions="topics">
+            <mat-list-option *ngFor="let topic of topics" checkboxPosition='before' [value]="topic">
+                {{topic}}
+            </mat-list-option>
+        </mat-selection-list>
+    </form>
+
+</div>

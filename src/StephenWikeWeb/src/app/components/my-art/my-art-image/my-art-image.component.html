@@ -1,0 +1,14 @@
+<button [@imageContainerExpand]="imageExpandState" class="image-container" (click)="changeFocus()">
+    
+    <div fxFill fxLayout="row">
+        <div class="image-section">
+            <img class="image" mat-card-image src="{{image.FilePath}}" alt="Photo of {{ image.Title }}"/>
+        </div>
+        <div *ngIf="imageExpandState == 'focused'" class="image-details-section">
+            <h1>{{image.Title || "Title Unknown"}}</h1>
+            <h2>{{image.Created || "Unknown Date"}} </h2>
+            <p>{{image.Description || "No Description."}}</p>
+        </div>
+    </div>
+    
+</button>

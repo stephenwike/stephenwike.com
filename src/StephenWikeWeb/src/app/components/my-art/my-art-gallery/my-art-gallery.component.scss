@@ -1,20 +1,10 @@
-.myart-content {
-    align-items: stretch; 
-    box-sizing: border-box; 
-    display: flex;
-    flex-wrap: wrap; 
-    flex: 1 1 100%; 
-}
-
-.art-row {
-    background-color: blue;
-}
-
-.art-card {
-    max-height: 400px;
-    background-color: rgba(#FFF, $alpha: 0.75);
+.gallery {
+    flex-wrap: wrap;
+    padding: 15px;
+    background-color: rgba(#000, 0.05);
 }
 
 .art-work {
-
+    max-height: 250px;
+    margin: 10px;
 }

@@ -1,0 +1,28 @@
+.image-container {
+    margin: auto;
+    background-color: black;
+}
+
+.image-section {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.image-details-section {
+    max-width: 50%;
+    color: lightgrey;
+    margin: auto;
+}
+
+.image {
+    padding: 0px;
+    height: 100%;
+    width: auto;
+    margin: auto;
+}
+
+.collapsedImage {
+    max-height: 250px;
+    margin: 10px;
+}

@@ -14,6 +14,7 @@ export class GalleryManagerService {
   SquaredMargin: number = 0.05;
   RandomImageOrder: boolean = true;
   RandomRowOrder: boolean = true;
+  Images: Image[];
 
   set MaxLandscape(val: number) {
     this.maxLandscape = val;
@@ -40,6 +41,39 @@ export class GalleryManagerService {
   }
 
   constructor() { }
+
+  GetTopics() {
+    let topics: string[] = this.Images.map(x => x.Topic);
+    let uniqueTopics: string[] = topics.filter((item, i, ar) => ar.indexOf(item) === i);
+    return uniqueTopics;
+  }
+
+  FilterImagesByTopic(topics: string[]): Image[] {
+    return this.Images.filter(x => topics.indexOf(x.Topic) !== -1);
+  }
+
+  SortBy(catergory: string): Image[] {
+    switch(catergory)
+    {
+      case "Newest": {
+        return this.Images //Not yet supported //.sort(x => x.Created);
+      }
+      case "Oldest": {
+        return this.Images //Not yet supported //.sort(x => x.Created).reverse();
+      }
+      case "Topic": {
+        let sortedArray = this.Images.sort((a, b) => {
+          if(a.Topic < b.Topic) { return -1; }
+          if(a.Topic > b.Topic) { return 1; }
+          return 0;});
+        return sortedArray;
+      }
+      case "Random": {
+        return this.Shuffle(this.Images);
+      }
+    }
+    return this.Images;
+  }
 
   BuildGallery(images: Image[]): Image[][] {
     let imgGrid: Image[][] = [];

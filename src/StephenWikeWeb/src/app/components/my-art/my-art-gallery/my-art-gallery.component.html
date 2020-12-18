@@ -1,26 +1,13 @@
-<div fxLayout="column" fxLayoutAlign="space-evenly center">
-  <div *ngFor="let row of artworks" fxLayout="row" fxLayoutAlign="space-evenly center">
-      <mat-card class="art-card" *ngFor="let art of row">
-        <mat-card-header>
-          <mat-card-title>{{ art.Title || 'Unknown Title' }}</mat-card-title>
-          <mat-card-subtitle>{{ art.Topic }} - {{ art.Created | date : 'MMM, y' }}</mat-card-subtitle>
-        </mat-card-header>
-        <img class="art-work" mat-card-image src="{{art.FilePath}}" alt="Photo of {{ art.Title }}">
-      </mat-card>
-    <!-- <mat-card *ngFor="let row of artworks">
-      <div class="art-card" *ngFor="let art of row">
-        <mat-card-header>
-          <mat-card-title>{{ art.Title || 'Unknown Title' }}</mat-card-title>
-          <mat-card-subtitle>{{ art.Topic }} - {{ art.Created | date : 'MMM, y' }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{art.FilePath}}" alt="Photo of {{ art.Title }}">
-      </div>
-    </mat-card> -->
+<!-- <app-my-art-image [image]=art (closeImage)="onCloseImage()"></app-my-art-image> -->
 
 
+<div class="gallery" fxLayout="row" fxLayoutAlign="space-around center">
 
 
-
-
+  <div *ngFor="let art of artworks">
+    <button (click)="display(art)">
+      <img class="art-work" mat-card-image src="{{art.FilePath}}" alt="Photo of {{ art.Title }}">
+    </button>
   </div>
+  
 </div>

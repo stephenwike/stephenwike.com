@@ -1,0 +1,21 @@
+.filter-header {
+    margin: auto;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.art-filter-container {
+    min-width: 250px;
+    background-color: seashell;
+    height: 100%;
+}
+
+.sortby-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.sortby-radio-button {
+    margin: 15px 25px;
+}

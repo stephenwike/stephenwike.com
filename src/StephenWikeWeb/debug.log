@@ -18,3 +18,7 @@
 [1211/170244.557:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\steph\AppData\Local\Temp\karma-33498416\Crashpad\attachments\da0f91d9-a023-49c0-b521-25df306c1205: The system cannot find the path specified. (0x3)
 [1211/185215.949:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
 [1212/120708.933:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1215/125457.672:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1215/125555.715:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1216/125456.227:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1216/125554.285:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

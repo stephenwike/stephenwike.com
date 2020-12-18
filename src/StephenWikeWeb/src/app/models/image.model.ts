@@ -5,6 +5,8 @@ export class Image {
     Topic: string = "";
     Height: number = 0;
     Width: number = 0;
+    Created: number;
+    Description: string;
 
     public constructor (init?:Partial<Image>)
     {
