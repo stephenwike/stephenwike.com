@@ -12,6 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MyArtFilterComponent } from './components/my-art/my-art-filter/my-art-filter.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyArtImageComponent } from './components/my-art/my-art-image/my-art-image.component';
+import { AuthModule } from '@auth0/auth0-angular';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,11 @@ import { MyArtImageComponent } from './components/my-art/my-art-image/my-art-ima
     MaterialModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AuthModule.forRoot({
+      domain: 'sw-services.us.auth0.com',
+      clientId: 'Re8a71sSqj9nCR7ufVwRafDa89AU7x9b'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

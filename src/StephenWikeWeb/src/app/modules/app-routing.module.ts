@@ -12,6 +12,8 @@ const routes: Routes = [
   { path: 'art', component: MyArtComponent },
   { path: 'art/gallery', component: MyArtGalleryComponent },
   { path: 'art/image', component: MyArtImageComponent },
+  { path: 'signin-callback', component: HomeComponent },
+  { path: 'signout-callback', component: HomeComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
